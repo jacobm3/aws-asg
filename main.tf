@@ -1,3 +1,7 @@
+provider "aws" {
+  region = "us-east1"
+}
+
 module "asg" {
   source = "terraform-aws-modules/autoscaling/aws"
 
