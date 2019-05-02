@@ -5,10 +5,10 @@ provider "aws" {
 module "asg" {
   source = "terraform-aws-modules/autoscaling/aws"
 
-  name = "service"
+  name = "coolest-asg-module"
 
   # Launch configuration
-  lc_name = "example-lc"
+  lc_name = "best-lc-ever"
 
   image_id        = "ami-ebd02392"
   instance_type   = "t2.micro"
@@ -31,7 +31,7 @@ module "asg" {
   ]
 
   # Auto scaling group
-  asg_name                  = "example-asg"
+  asg_name                  = "coolest-asg"
   vpc_zone_identifier       = ["subnet-07e11a155b1d15faa", "subnet-0f1aa1afac01c5ed6"]
   health_check_type         = "EC2"
   min_size                  = 0
