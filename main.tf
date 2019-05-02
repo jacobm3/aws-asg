@@ -5,7 +5,7 @@ provider "aws" {
 module "asg" {
   source = "terraform-aws-modules/autoscaling/aws"
 
-  name = "coolest-asg-module"
+  name = "coolest-asg"
 
   # Launch configuration
   lc_name = "best-lc-ever"
@@ -48,6 +48,11 @@ module "asg" {
     {
       key                 = "Project"
       value               = "megasecret"
+      propagate_at_launch = true
+    },
+    {
+      key                 = "owner"
+      value               = "jmartinson@hashicorp.com"
       propagate_at_launch = true
     },
   ]
