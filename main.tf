@@ -10,7 +10,7 @@ module "asg" {
   # Launch configuration
   lc_name = "best-lc-ever"
 
-  image_id        = "ami-ebd02392"
+  image_id        = "ami-2757f631"
   instance_type   = "t2.micro"
   security_groups = ["sg-0202d12a0907030e3"]
 
